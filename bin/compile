@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+
+echo "-----> Installing dotenvx..."
+
+curl -fsS https://dotenvx.sh/ | sh
+
+echo "-----> dotenvx installation done"

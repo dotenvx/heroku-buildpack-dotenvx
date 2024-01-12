@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# No release tasks, just an empty script
+exit 0

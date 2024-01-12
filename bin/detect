@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Always succeed since we always want to install dotenvx
+exit 0
