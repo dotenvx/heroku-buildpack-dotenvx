@@ -2,5 +2,5 @@
 
 > install `dotenvx` to heroku
 > ```
-> heroku buildpacks:add https://github.com/dotenvx/heroku-buildpack-dotenvx -a your-app-name
+> heroku buildpacks:add https://github.com/dotenvx/heroku-buildpack-dotenvx -a your-app
 > ```
