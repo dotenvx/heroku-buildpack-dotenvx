@@ -4,6 +4,20 @@ BUILD_DIR=$1
 
 echo "-----> Installing dotenvx..."
 
-curl -fsS https://dotenvx.sh/ | sh
+# Determine platform and architecture
+PLATFORM=$(uname)
+ARCH=$(uname -m)
 
-echo "-----> dotenvx installation done"
+# Create a directory for dotenvx binary
+DOTENVX_BIN_DIR="$BUILD_DIR/bin"
+mkdir -p $DOTENVX_BIN_DIR
+
+# Download and extract dotenvx binary
+curl -fsSL "https://dotenvx.sh/$PLATFORM/$ARCH".tgz | tar xz -C $DOTENVX_BIN_DIR
+
+echo "dotenvx installed to $DOTENVX_BIN_DIR"
+
+# Optionally, add dotenvx binary directory to PATH for subsequent buildpacks or scripts
+export PATH="$DOTENVX_BIN_DIR:$PATH"
+
+echo "-----> dotenvx installation completed"
