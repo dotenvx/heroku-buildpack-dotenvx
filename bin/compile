@@ -30,9 +30,6 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/dotenvx.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH=$PATH:/app/dotenvx' >> $PROFILE_PATH
 
-which dotenvx
-dotenvx --version
-
 # Optionally, add dotenvx binary directory to PATH for subsequent buildpacks or scripts
 # export PATH="$DOTENVX_BIN_DIR:$PATH"
 
