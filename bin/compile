@@ -17,7 +17,8 @@ curl -fsSL "https://dotenvx.sh/$PLATFORM/$ARCH".tgz | tar xz -C $DOTENVX_BIN_DIR
 chmod +x $DOTENVX_BIN_DIR/dotenvx
 
 # test binary and output help
-$DOTENVX_BIN_DIR/dotenvx help
+which dotenvx
+$DOTENVX_BIN_DIR/dotenvx --version
 
 # Optionally, add dotenvx binary directory to PATH for subsequent buildpacks or scripts
 export PATH="$DOTENVX_BIN_DIR:$PATH"
