@@ -31,3 +31,7 @@ app[web.1]: [dotenvx@0.9.0] injecting env (1) from encrypted .env.vault
 ---
 
 > See [full guide to usage](https://dotenvx.com/docs/platforms/heroku)
+
+---
+
+To publish buildpack: `heroku buildpacks:publish dotenvx/heroku-buildpack-dotenvx main`
