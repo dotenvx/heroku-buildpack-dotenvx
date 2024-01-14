@@ -30,7 +30,7 @@ app[web.1]: [dotenvx@0.9.0] injecting env (1) from encrypted .env.vault
 
 ---
 
-> See [full guide to usage](https://dotenvx.com/docs/platforms/heroku)
+> See [full usage guide](https://dotenvx.com/docs/platforms/heroku)
 
 ---
 
