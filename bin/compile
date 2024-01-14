@@ -15,7 +15,8 @@ mkdir -p $DOTENVX_BIN_DIR
 # Download and extract dotenvx binary
 curl -fsSL "https://dotenvx.sh/$PLATFORM/$ARCH".tgz | tar xz -C $DOTENVX_BIN_DIR
 
-echo "dotenvx installed to $DOTENVX_BIN_DIR"
+# test binary and output help
+dotenvx help
 
 # Optionally, add dotenvx binary directory to PATH for subsequent buildpacks or scripts
 export PATH="$DOTENVX_BIN_DIR:$PATH"
