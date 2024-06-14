@@ -15,7 +15,8 @@ DOTENVX_BIN_DIR="$BUILD_DIR/dotenvx"
 mkdir -p $DOTENVX_BIN_DIR
 
 # Download and extract dotenvx binary
-curl -fsSL "https://dotenvx.sh/$PLATFORM/$ARCH".tgz | tar xz -C $DOTENVX_BIN_DIR
+# curl -fsSL "https://dotenvx.sh/$PLATFORM/$ARCH".tgz | tar xz -C $DOTENVX_BIN_DIR
+curl -fsS https://dotenvx.sh/install.sh | sh -s -- --directory="$DOTENVX_BIN_DIR"
 
 # make sure it is executable
 chmod +x $DOTENVX_BIN_DIR/dotenvx
