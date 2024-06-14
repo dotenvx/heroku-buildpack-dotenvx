@@ -14,22 +14,6 @@ Add `dotenvx` to your Procfile.
 web: dotenvx run -- node index.js
 ```
 
-Set `DOTENV_KEY` on heroku.
-
-```shell
-heroku config:set DOTENV_KEY='dotenv://:key_1234...@dotenvx.com/vault/.env.vault?environment=production'
-```
-
-On deploy, dotenvx will decrypt your `.env.vault` file using the `DOTENV_KEY` and inject your env just in time.
-
-```
-$ heroku logs --tail
-heroku[web.1]: Starting process with command `dotenvx run -- node index.js`
-app[web.1]: [dotenvx@0.9.0] injecting env (1) from encrypted .env.vault
-```
-
----
-
 > See [full usage guide](https://dotenvx.com/docs/platforms/heroku)
 
 ---
